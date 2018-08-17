@@ -166,7 +166,7 @@ client.on('guildMemberAdd', member => {
     .setColor('Blue')
     .setFooter('OMG Server', 'https://media.discordapp.net/attachments/421715420370960386/480105769472360470/omg1.jpg')
 
-var channel =member.guild.channels.find('name', 'public-chat')
+var channel =member.guild.channels.find('name', 'welcome')
 if (!channel) return;
 channel.send({embed : embed});
 });
