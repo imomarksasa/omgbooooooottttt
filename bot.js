@@ -28,6 +28,7 @@ client.on("message", message => {
         }).then(collected => {
           message.delete();
           m.delete();
+          message.member.removeRole(message.guild.roles.find(c => c.name == "Not Active"));
           message.member.addRole(message.guild.roles.find(c => c.name == "[ Rocketer User ]"));
         }).catch(() => {
           m.edit(`You took to long to type the number.\nRe-type the command again if you want to verify yourself.`).then(m2 => m.delete(15000));
