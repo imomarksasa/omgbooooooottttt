@@ -12,7 +12,7 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","[ Rocketer User ]"));
+    member.addRole(member.guild.roles.find("name","Not Active"));
     });
 
 
