@@ -12,7 +12,7 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","Not Activated ❌"));
+    member.addRole(member.guild.roles.find("name","★ SMG - Not Activated ❌"));
     });
 
 
@@ -28,8 +28,8 @@ client.on("message", message => {
         }).then(collected => {
           message.delete();
           m.delete();
-          message.member.removeRole(message.guild.roles.find(c => c.name == "Not Activated ❌"));
-          message.member.addRole(message.guild.roles.find(c => c.name == "Activated ✔️"));
+          message.member.removeRole(message.guild.roles.find(c => c.name == "★ SMG - Not Activated ❌"));
+          message.member.addRole(message.guild.roles.find(c => c.name == "★ SMG - Activated ✔️"));
         }).catch(() => {
           m.edit(`You took to long to type the number.\nRe-type the command again if you want to verify yourself.`).then(m2 => m.delete(15000));
 });
